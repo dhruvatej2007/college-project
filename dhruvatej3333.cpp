@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 void welcome() {
-    printf("\n**");
-    printf("\nWelcome to Amazon Service Billing Calculator");
-    printf("\n**\n");
+      printf("\n************************************************************************");
+    printf("\n                WELCOME TO DHRUVA SERVICE BILLING   ");
+    printf("\n************************************************************************\n");
 }
 
 void input(int *numServices, int services[], int billingTypes[], float times[]) {
@@ -75,7 +75,7 @@ float calculateBill(int service, int billingType, float time) {
 void output(int numServices, int services[], int billingTypes[], float times[]) {
     float totalBill = 0;
 
-    printf("\n**");
+    printf("\n***************************************************************");
     for (int i = 0; i < numServices; i++) {
         if (services[i] == 0) {
             printf("\nService %d was skipped due to invalid input.", i + 1);
@@ -91,8 +91,9 @@ void output(int numServices, int services[], int billingTypes[], float times[]) 
         printf("\nBill for service %d: $%.2f", i + 1, bill);
         totalBill += bill;
     }
-    printf("\n\nTotal bill for all services: $%.2f", totalBill);
-    printf("\n**\n");
+      printf("\n***************************************************************\n");
+    printf("\n         Total bill for all services: $%.2f", totalBill);
+    printf("\n***************************************************************\n");
 }
 
 int main() {
